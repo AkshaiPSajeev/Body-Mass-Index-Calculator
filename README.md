@@ -1,2 +1,2 @@
 # Body-Mass-Index-Calculator
-Body mass index calculator using React
+This is the first task I did inorder to learn React js
