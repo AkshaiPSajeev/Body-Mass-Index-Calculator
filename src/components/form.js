@@ -1,11 +1,11 @@
 import React from 'react'
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 
  function Form({getData}){
     const [weight, setWeight] = useState("")
     const [height, setHeight] = useState("")
     const [alert, setAlert] = useState(false)
- 
+    const [refresh,setRefresh]=useState(false)
     const getHeight=(e)=>{
         setHeight(e.target.value)
     }
@@ -20,6 +20,7 @@ import {useState} from 'react'
            console.log(weight);
            setHeight('');
            setWeight('');
+           setRefresh(true);
         }
         
     }
@@ -39,11 +40,11 @@ import {useState} from 'react'
             <form onSubmit={onSubmit}>
            
                
-                <input type='text' value={weight} onChange={(e)=>setWeight(e.target.value)} className='form-control mt-3' required placeholder='Enter your weight in kilogram' />
+                <input type='text' value={weight} onChange={(e)=>setWeight(e.target.value)} className='form-control mt-3' required placeholder='Weight in kilogram' />
             
            
                
-                <input type='text' className='form-control mt-3'  value={height} onChange={getHeight} required placeholder='Enter your height in meters eg:(1.65 for 165 m)' />
+                <input type='text' className='form-control mt-3'  value={height} onChange={getHeight} required placeholder='Height in meters eg:(1.65 for 165 m)' />
                 
                 <input type='submit' className='btn btn-primary mt-3 flex px-5 mx-5' value="Get Bmi"/>
          
@@ -54,7 +55,9 @@ import {useState} from 'react'
 
 
           </div>
+        
         </  div>
+        
       </div>
     )
 }
