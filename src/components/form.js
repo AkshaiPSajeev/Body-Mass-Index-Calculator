@@ -43,7 +43,7 @@ import {useState} from 'react'
             
            
                
-                <input type='text' className='form-control mt-3'  value={height} onChange={getHeight} required placeholder='Enter your height in meters' />
+                <input type='text' className='form-control mt-3'  value={height} onChange={getHeight} required placeholder='Enter your height in meters eg:(1.65 for 165 m)' />
                 
                 <input type='submit' className='btn btn-primary mt-3 flex px-5 mx-5' value="Get Bmi"/>
          
