@@ -44,7 +44,7 @@ import {useState,useEffect} from 'react'
             
            
                
-                <input type='text' className='form-control mt-3'  value={height} onChange={getHeight} required placeholder='Height in meters eg:(1.65 for 165 m)' />
+                <input type='text' className='form-control mt-3'  value={height} onChange={getHeight} required placeholder='Height in meters eg:(1.65 for 165 cm)' />
                 
                 <input type='submit' className='btn btn-primary mt-3 flex px-5 mx-5' value="Get Bmi"/>
          
